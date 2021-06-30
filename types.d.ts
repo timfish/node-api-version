@@ -1,9 +1,8 @@
-declare module "node-api-version" {
-  function fromNodeVersion(version: string): number | undefined;
-  function fromElectronVersion(version: string): number | undefined;
+declare function fromNodeVersion(version: string): number | undefined;
+declare function fromElectronVersion(version: string): number | undefined;
 
-  export = {
-    fromNodeVersion,
-    fromElectronVersion,
-  };
-}
+declare const _default: {
+  fromNodeVersion: typeof fromNodeVersion;
+  fromElectronVersion: typeof fromElectronVersion;
+};
+export = _default;

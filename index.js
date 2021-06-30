@@ -21,6 +21,8 @@ function fromNodeVersion(nodeVersion) {
   return undefined;
 }
 
+exports.fromNodeVersion = fromNodeVersion;
+
 // These are populated via `yarn electron-versions`
 const electronNapiVersions =
   // replace-start
@@ -52,7 +54,4 @@ function fromElectronVersion(electronVersion) {
   return undefined;
 }
 
-module.exports = {
-  fromNodeVersion,
-  fromElectronVersion,
-};
+exports.fromElectronVersion = fromElectronVersion;

@@ -1,6 +1,6 @@
 # node-api-version
 
-Get the maximum Node-API version supported via a specific version of node or Electron.
+Get the maximum Node-API version supported for a specific version of node or Electron.
 
 ```js
 const { fromNodeVersion, fromElectronVersion } = require("node-api-version");

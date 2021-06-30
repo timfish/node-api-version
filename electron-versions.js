@@ -1,5 +1,6 @@
 const got = require("got");
 const semver = require("semver");
+const { fromNodeVersion } = require(".");
 const { readFileSync, writeFileSync } = require("fs");
 
 got(`https://cdn.jsdelivr.net/gh/electron/releases/lite.json`).then(
@@ -8,16 +9,17 @@ got(`https://cdn.jsdelivr.net/gh/electron/releases/lite.json`).then(
 
     const versionChanges = [];
 
-    let prevNode = "";
+    let prevNapi = "";
     for (const release of releases) {
       const version = semver.parse(release.version);
       if (version.major < 3) {
         continue;
       }
 
-      if (release.deps.node !== prevNode) {
-        prevNode = release.deps.node;
-        versionChanges.push([release.version, prevNode]);
+      const thisNapi = fromNodeVersion(release.deps.node);
+      if (thisNapi !== prevNapi) {
+        prevNapi = thisNapi;
+        versionChanges.push([release.version, prevNapi]);
       }
     }
 

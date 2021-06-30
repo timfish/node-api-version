@@ -1,8 +1,9 @@
 {
   "name": "node-api-version",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Tim Fish <tim@timfish.uk>",
   "main": "index.js",
+  "types": "types.d.ts",
   "description": "Gets the supported Node-API version for a specific node or electron version",
   "license": "MIT",
   "scripts": {

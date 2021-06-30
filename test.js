@@ -24,6 +24,7 @@ assert.strictEqual(nodeApi.fromElectronVersion("8.0.0"), 5);
 assert.strictEqual(nodeApi.fromElectronVersion("9.0.0"), 5);
 assert.strictEqual(nodeApi.fromElectronVersion("10.0.0"), 5);
 assert.strictEqual(nodeApi.fromElectronVersion("11.0.0"), 6);
+assert.strictEqual(nodeApi.fromElectronVersion("12.0.0-nightly.20200827"), 6);
 assert.strictEqual(nodeApi.fromElectronVersion("12.0.0"), 7);
 assert.strictEqual(nodeApi.fromElectronVersion("13.0.0"), 7);
 assert.strictEqual(nodeApi.fromElectronVersion("14.0.0"), 7);
